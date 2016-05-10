@@ -5,61 +5,61 @@ var employees = [
 	{
 		firstName: 'Vinesh',
 		lastName: 'Patel',
-		email: 'vpatel@arcfix.com',
+		email: 'vpatel@abc.com',
 		position: 'Developer'
 	},
 	{
 		firstName: 'Adam',
-		lastName: 'Roussos',
-		email: 'aroussos@arcfix.com',
+		lastName: 'Rich',
+		email: 'arich@abc.com',
 		position: 'Owner'
 	},
 	{
 		firstName: 'Jason',
 		lastName: 'Aden',
-		email: 'jasonaden@gmail.com',
+		email: 'jason@gmail.com',
 		position: 'Project Manager'
 	},
 	{
 		firstName: 'John',
 		lastName: 'Mark',
-		email: 'mjohn@arcfix.com',
+		email: 'mjohn@abc.com',
 		position: 'Tester'
 	},
 	{
 		firstName: 'Dan',
 		lastName: 'Sten',
-		email: 'sdan@arcfix.com',
+		email: 'sdan@abc.com',
 		position: 'Designer'
 	},
 	{
 		firstName: 'Stuart',
 		lastName: 'Karsh',
-		email: 'kstuart@arcfix.com',
+		email: 'kstuart@abc.com',
 		position: 'Developer'
 	},
 	{
 		firstName: 'Alex',
 		lastName: 'Chalrles',
-		email: 'calex@arcfix.com',
+		email: 'calex@abc.com',
 		position: 'Developer'
 	},
 	{
 		firstName: 'Albert',
 		lastName: 'Einstein',
-		email: 'ealbert@arcfix.com',
+		email: 'ealbert@abc.com',
 		position: 'Developer'
 	},
 	{
 		firstName: 'Johny',
 		lastName: 'Depp',
-		email: 'djohny@arcfix.com',
+		email: 'djohny@abc.com',
 		position: 'Developer'
 	},
 	{
 		firstName: 'Scarlet',
 		lastName: 'Johnson',
-		email: 'jscarlet@arcfix.com',
+		email: 'jscarlet@abc.com',
 		position: 'Developer'
 	}
 ];
