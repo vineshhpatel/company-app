@@ -1,0 +1,34 @@
+<div class="container emp-details" id="emp-details">
+	<h3 class="page-header"> 
+		Employee Details
+        <div class="pull-right">
+            <button ui-sref="saveEmployee({ id: $ctrl.employee.id })" class="fa fa-edit btn btn-primary" uib-tooltip="Edit this employee">  </button>
+            <button class="fa fa-trash btn btn-danger" ng-click="$ctrl.remove($ctrl.employee.email, $ctrl.employee)" uib-tooltip="Delete this employee">  </button>
+        </div>
+	</h3>
+    <div class="row" ng-if="$ctrl.errorMessage">
+        <div class="col-xs-12">
+            <h5 class="alert-dange"> {{ $ctrl.errorMessage }} </h5>
+        </div>
+    </div>
+    <div class="row" ng-if="!$ctrl.errorMessage">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-5"><strong> ID </strong></div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-7"> {{ $ctrl.employee.id }} </div>
+    </div>
+    <div class="row" ng-if="!$ctrl.errorMessage">
+    	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-5"><strong> First Name </strong></div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-7"> {{ $ctrl.employee.firstName }} </div>
+    </div>
+    <div class="row" ng-if="!$ctrl.errorMessage">
+    	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-5"><strong> Last Name </strong></div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-7"> {{ $ctrl.employee.lastName }} </div>
+    </div>
+    <div class="row" ng-if="!$ctrl.errorMessage">
+    	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-5"><strong> Email </strong></div>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-7"> {{ $ctrl.employee.email }} </div>
+    </div>
+    <div class="row" ng-if="!$ctrl.errorMessage">
+    	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-5"><strong> Position </strong></div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-7 "> {{ $ctrl.employee.position }} </div>
+    </div>
+</div>

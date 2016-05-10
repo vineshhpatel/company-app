@@ -1,0 +1,50 @@
+h3.page-header {
+	@media screen and (max-width: 340px) {
+		font-size: 22px;
+	}
+
+	.button-text {
+		@media screen and (max-width: 340px) {
+			display: none;
+		}	
+	}
+}
+
+#emp-list {
+
+	.standard-description {
+	    overflow: hidden;
+	    -ms-text-overflow: ellipsis;
+	    -o-text-overflow: ellipsis;
+	    text-overflow: ellipsis;
+	    display: block;
+	}
+
+	.header-row {
+		border-bottom: 1px solid #000;
+		// text-align: center;
+	}
+
+	.data-row {
+		padding: 5px 0;
+		border-bottom: 1px solid #DDD;
+		.fa {
+			cursor: pointer;
+			padding: 5px;
+			&.fa-trash {
+				color: #F33;
+			}
+		}
+	}
+
+	.actions {
+		
+	}
+}
+
+#emp-details {
+
+	.row {
+		padding: 5px 0;
+	}
+}

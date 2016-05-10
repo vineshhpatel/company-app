@@ -1,0 +1,30 @@
+<!-- <header class="hero-unit" id="banner">
+  <div class="container">
+    <h4>Employee List</h4>
+  </div>
+</header> -->
+
+<div class="container emp-list" id="emp-list">
+	<h3 class="page-header"> 
+		Employee List 
+		<button ui-sref="saveEmployee({ id: employee.id })" class="btn btn-primary pull-right"> <span class="fa fa-plus"> </span> <span class="button-text"> Create Employee </span> </button>
+	</h3>
+    <div class="row header-row">
+    	<div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"><strong> ID </strong></div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><strong> Name </strong></div>
+    	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><strong> Email </strong></div>
+    	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><strong> Position </strong></div>
+    	<div class="col-lg-3 col-md-3 col-sm-2 col-xs-2 actions"><strong> Actions </strong></div>
+    </div>
+    <div class="row data-row" ng-repeat="employee in $ctrl.employees">
+    	<div class="col-lg-2 col-md-2 col-sm-1 col-xs-1 standard-description"> {{ employee.id }} </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 standard-description"> {{ employee.firstName +' '+ employee.lastName }} </div>
+    	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 standard-description"> {{ employee.email }} </div>
+    	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 standard-description"> {{ employee.position?employee.position:'----' }} </div>
+    	<div class="col-md-3 col-md-3 col-sm-2 col-xs-2 actions">
+    		<a ui-sref="viewEmployee({ id: employee.id })" class="fa fa-folder-open" uib-tooltip="View Employee">  </a>
+    		<a ui-sref="saveEmployee({ id: employee.id })" class="fa fa-edit" uib-tooltip="Edit Employee">  </a>
+    		<a href class="fa fa-trash" ng-click="$ctrl.remove(employee.email ,employee)" uib-tooltip="Delete Employee">  </a>
+    	</div>
+    </div>
+</div>

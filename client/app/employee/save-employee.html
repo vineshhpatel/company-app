@@ -1,0 +1,60 @@
+<div class="container save-emp" id="save-emp">
+	<h3 class="page-header"> 
+		{{ $ctrl.employee.id?'Edit':'Create' }} Employee
+	</h3>
+    <div class="row">
+    	<form novalidate name="employeeForm" autocomplete="false">
+            <div class="col-xs-12 col-sm-12">
+                <div class="form-group" ng-class="{'has-error': employeeForm.firstName.$invalid && employeeForm.$submitted}">
+                    <label> First Name *</label>
+                    <input type="text" class="form-control" ng-model="$ctrl.employee.firstName" name="firstName" required autocomplete="false"/>
+                    <p class="text-danger" ng-show="$ctrl.error.firstName">
+                        {{ $ctrl.error.firstName }}
+                    </p>
+                    <p class="text-danger" ng-show="employeeForm.firstName.$invalid && employeeForm.$submitted">
+                        First name required
+                    </p>
+                </div>
+                <div class="form-group" ng-class="{'has-error': employeeForm.lastName.$invalid && employeeForm.$submitted}">
+                    <label> Last Name *</label>
+                    <input type="text" class="form-control" ng-model="$ctrl.employee.lastName" name="lastName" required autocomplete="false"/>
+                    <p class="text-danger" ng-show="$ctrl.error.lastName">
+                        {{ $ctrl.error.lastName }}
+                    </p>
+                    <p class="text-danger" ng-show="employeeForm.lastName.$invalid && employeeForm.$submitted">
+                        First name required
+                    </p>
+                </div>
+                <div class="form-group" ng-class="{'has-error': employeeForm.email.$invalid && employeeForm.$submitted}">
+                    <label> Email *</label>
+                    <input type="email" class="form-control" ng-model="$ctrl.employee.email" name="email" required/>
+                    <p class="text-danger" ng-show="$ctrl.error.email">
+                        {{ $ctrl.error.email }}
+                    </p>
+                    <p class="text-danger" ng-show="employeeForm.email.$error.required && employeeForm.$submitted">
+                        Email required
+                    </p>
+                    <p class="text-danger" ng-show="employeeForm.email.$error.email && employeeForm.$submitted">
+                        Invalid Email
+                    </p>
+                </div>
+                <div class="form-group" ng-class="{'has-error': employeeForm.position.$invalid && employeeForm.$submitted}">
+                    <label> Position </label>
+                    <input type="text" class="form-control" ng-model="$ctrl.employee.position" name="position" autocomplete="false"/>
+                    <p class="text-danger" ng-show="$ctrl.error.position">
+                        {{ $ctrl.error.position }}
+                    </p>
+                </div>
+                
+                <div class="alert alert-danger" ng-show="$ctrl.error.message"> {{ $ctrl.error.message }} </div>
+                <div class="alert alert-success" ng-show="$ctrl.employeeCreated"> Employee Saved Successfully! </div>
+                <div class="alert alert-success" ng-show="$ctrl.employeeUpdated"> Employee Updated Successfully! </div>
+            </div>
+            <div class="pull-right">
+                <a class="btn btn-danger fa-2x" ng-click="$ctrl.cancel()"> Cancel </a>
+                <button class="btn btn-success fa-2x" ng-disable="$ctrl.formSubmitted || !employeeForm.$valid" ng-click="$ctrl.saveEmployee(employeeForm.$valid)"> Save </button>
+                <span>&nbsp;</span>
+            </div>
+        </form>
+    </div>
+</div>
